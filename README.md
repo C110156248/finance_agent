@@ -32,7 +32,7 @@ finance_agent/
 
 需自行安裝ollama
 
-    ```bash
+    ```
     pip install -r requirements.txt
     ```
 
