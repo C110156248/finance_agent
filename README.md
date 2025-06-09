@@ -30,12 +30,9 @@ finance_agent/
 
 1.  **安裝相依套件**
 
-
-
     ```bash
     pip install -r requirements.txt
     ```
-需自行安裝ollama
 
 2.  **執行 Streamlit 應用程式**
 
