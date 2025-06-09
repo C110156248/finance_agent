@@ -22,6 +22,7 @@ finance_agent/
 ├── app.py            # Streamlit 應用程式介面
 ├── stock_utils.py    # 股票資料相關的工具函式
 ├── utils.py          # 通用工具函式
+├── requirements.txt  # 安裝套件
 └── README.md         # 說明文件
 ```
 
