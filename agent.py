@@ -5,18 +5,7 @@ import pandas as pd
 from langgraph.graph import StateGraph, END
 from utils import call_chatglm
 from stock_utils import fetch_us_stock, fetch_tw_stock, compute_technical_indicators, get_fundamental_data, generate_analysis_summary
-# -------------------------------
-# 1. 呼叫本地 ChatGLM 的輔助函式  call_chatglm
-# -------------------------------
-# -------------------------------
-# 2. 工具函式：抓取股票資料 fetch_us_stock, fetch_tw_stock
-# -------------------------------
-# -------------------------------
-# 3. 工具函式：計算技術指標 compute_technical_indicators
-# -------------------------------
-# -------------------------------
-# 4. LangGraph 節點實作
-# -------------------------------
+
 def query_understanding_node(state):
     """
     修改後的查詢理解節點：自動判斷市場類型，只需要股票代號
@@ -283,9 +272,7 @@ def response_generator(state):
         print(f"LLM 回應生成失敗: {e}")
     return {**state, "response_text": final_response}
 
-# -------------------------------
-# 5. 狀態定義
-# -------------------------------
+
 class StockState(TypedDict):
     query: str
     market: str
@@ -304,9 +291,7 @@ class StockState(TypedDict):
     response_text: str
     error: str
 
-# -------------------------------
-# 6. 建構 LangGraph Graph
-# -------------------------------
+
 def build_stock_agent():
     workflow = StateGraph(StockState)
 
@@ -323,9 +308,7 @@ def build_stock_agent():
 
     return workflow.compile()
 
-# -------------------------------
-# 7. Agent 執行介面
-# -------------------------------
+
 class StockAgent:
     def __init__(self):
         self.graph = build_stock_agent()
@@ -369,7 +352,7 @@ class StockAgent:
         
         return df_with_indicators, market
 # -------------------------------
-# 8. 測試程式
+# 測試程式
 # -------------------------------
 # if __name__ == "__main__":
 #     agent = StockAgent()
