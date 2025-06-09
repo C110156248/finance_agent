@@ -33,15 +33,6 @@ finance_agent/
     pip install -r requirements.txt
     ```
 
-    請確保 `requirements.txt` 檔案包含所有必要的套件，例如：
-
-    ```
-    streamlit
-    yfinance
-    pandas
-    langgraph
-    matplotlib
-    ```
 
 2.  **執行 Streamlit 應用程式**
 
@@ -61,26 +52,6 @@ finance_agent/
 
     系統會顯示 AI 分析報告、技術分析圖表和基本統計資訊。
 
-## 程式碼說明
-
--   `agent.py`：
-    -   定義了 `StockAgent` 類別，負責執行股票分析查詢。
-    -   使用 LangGraph 建立工作流程，包括查詢理解、資料獲取、金融分析和回應生成等節點。
-    -   使用 `call_chatglm` 函數呼叫本地 ChatGLM 模型生成分析報告。
--   `app.py`：
-    -   使用 Streamlit 建立使用者介面。
-    -   接收使用者輸入的股票代號，並呼叫 `StockAgent` 進行分析。
-    -   顯示 AI 分析報告和技術分析圖表。
--   `stock_utils.py`：
-    -   包含股票資料相關的工具函式，例如：
-        -   `fetch_us_stock`：抓取美股歷史資料。
-        -   `fetch_tw_stock`：抓取台股歷史資料。
-        -   `compute_technical_indicators`：計算技術指標，如移動平均線和 RSI。
-        -   `get_fundamental_data`：獲取基本面資料。
-        -   `generate_analysis_summary`：生成分析摘要。
--   `utils.py`：
-    -   包含通用工具函式，例如：
-        -   `call_chatglm`：呼叫本地 ChatGLM 模型。
 
 ## 注意事項
 
