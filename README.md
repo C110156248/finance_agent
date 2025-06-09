@@ -29,6 +29,7 @@ finance_agent/
 
 1.  **安裝相依套件**
 
+需自行安裝ollama
     ```bash
     pip install -r requirements.txt
     ```
