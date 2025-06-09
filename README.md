@@ -32,16 +32,14 @@ finance_agent/
 
 需自行安裝ollama
 
-    ```
-    bash
+    ```bash
     pip install -r requirements.txt
     ```
 
 
 2.  **執行 Streamlit 應用程式**
 
-    ```
-    bash
+    ```bash
     streamlit run app.py
     ```
 
