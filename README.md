@@ -39,7 +39,7 @@ finance_agent/
 
 2.  **執行 Streamlit 應用程式**
 
-    ```bash
+    ```
     streamlit run app.py
     ```
 
